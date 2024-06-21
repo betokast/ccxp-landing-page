@@ -6,6 +6,7 @@
 
 :root {
   --primary-purple: #514988;
+  --primary-purple-hover: #352e63;
   --white: #fff;
   --primary-orange: #f3c61f;
   --primary-magenta: #e33881;
@@ -14,6 +15,7 @@
 
 body {
   font-family: var(--standard-font);
+  height: 800px;
 }
 
 #left-side {
@@ -32,16 +34,42 @@ h1 {
   color: var(--primary-purple);
 }
 
+#subtitle-timer {
+  color: var(--primary-magenta);
+  font-weight: bolder;
+}
+
+#subtitle-cards {
+  color: var(--primary-purple);
+  font-weight: bolder;
+}
+
 h6 {
   margin: 0 0 40px 0;
 }
 
 #btn {
-  padding: 25px;
+  padding: 25px 50px;
   background-color: var(--primary-purple);
   margin: 85px 0 0 0;
+  transition: all ease 0.5s;
+  font-weight: bolder;
+}
+
+#btn:hover {
+  background-color: var(--primary-purple-hover);
+  color: var(--primary-orange);
 }
 
 #btn-container {
   height: 100%;
+}
+
+.timer {
+  display: flex;
+  gap: 40px;
+}
+
+.timer h1 {
+  color: var(--primary-purple);
 }
