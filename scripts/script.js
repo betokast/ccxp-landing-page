@@ -2,7 +2,6 @@ const dia = document.getElementById("dia");
 const hora = document.getElementById("hora");
 const min = document.getElementById("minuto");
 const seg = document.getElementById("segundo");
-
 const lancamento = "17 dec 2024";
 
 function countdown() {
@@ -28,4 +27,10 @@ function formatoTempo(tempo) {
 
 countdown();
 
-setInterval(countdown, 1000)
+setInterval(countdown, 1000);
+
+// Função para o highlight dos cards
+function highlightCard(selector) {
+  let element = document.querySelector(selector);
+  element.classList.toggle('card-highlight');
+}
