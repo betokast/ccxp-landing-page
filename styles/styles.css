@@ -10,6 +10,7 @@
   --white: #fff;
   --primary-orange: #f3c61f;
   --primary-magenta: #e33881;
+  --highlight: #8377d3;
   --standard-font: 'Verdana', sans-serif;
 }
 
@@ -72,4 +73,10 @@ h6 {
 
 .timer h1 {
   color: var(--primary-purple);
+}
+
+/* Classes do box-shadow */
+.card-highlight {
+  box-shadow: 10px 10px var(--highlight);
+  transition: all ease 0.4s;
 }
