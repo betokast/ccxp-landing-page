@@ -32,5 +32,4 @@ setInterval(countdown, 1000);
 // Função para o highlight dos cards
 function highlightCard(selector) {
   let element = document.querySelector(selector);
-  element.classList.toggle('card-highlight');
-}
+  element.classList.toggle('card-highlight');}
