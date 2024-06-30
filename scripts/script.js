@@ -5,7 +5,7 @@ const seg = document.getElementById("segundo");
 const lancamento = "17 dec 2024";
 let ingressos = [];
 
-function countdown() {
+countdown = () => {
   const dataLanca = new Date(lancamento);
   const dataAtual = new Date();
 
@@ -22,7 +22,7 @@ function countdown() {
   seg.innerHTML = `${formatoTempo(finalSegundos)}S`;
 }
 
-function formatoTempo(tempo) {
+formatoTempo = (tempo) => {
   return tempo < 10 ? `0${tempo}` : tempo;
 }
 
@@ -31,13 +31,14 @@ countdown();
 setInterval(countdown, 1000);
 
 // Função para o highlight dos cards
-function highlightCard(selector) {
+highlightCard = (selector) => {
   let element = document.querySelector(selector);
-  element.classList.toggle('card-highlight');}
+  element.classList.toggle('card-highlight');
+}
 
 
-// Função para identificar tecla pressionada
-function checkKeyboardCode() {
+// Função para identificar código da tecla pressionada
+checkKeyboardCode = () => {
   document.addEventListener('keydown', (event) => {
     let nome = event.key;
     let code = event.code;
@@ -46,7 +47,7 @@ function checkKeyboardCode() {
 }
 
 // Função para reagir a uma tecla pressionada
-function addKeyboardEventListener() {
+addKeyboardEventListener = () => {
   document.addEventListener('keydown', (event) => {
     var ingresso1 = document.getElementById("quinta");
     var ingresso2 = document.getElementById("sexta");
@@ -85,7 +86,7 @@ function addKeyboardEventListener() {
 }
 
 //Função para incluir ou remover seleção para os cards
-function selectedCard(selector) {
+selectedCard = (selector) => {
   let element = document.querySelector(selector);
   element.classList.toggle("card-selected");
   if(ingressos.includes(selector)) {
@@ -96,9 +97,9 @@ function selectedCard(selector) {
 }
 
 //Função para mostrar a confirmação dos cards selecionados ao clicar no botão Garanta o seu!
-function showSelectedCards() {
+showSelectedCards = () => {
   if(ingressos.length > 0) {
-    alert("Ingressos Selecionados:" + ingressos);
+    alert(`Ingressos Selecionados: ${ingressos}`);
   }
 }
 
