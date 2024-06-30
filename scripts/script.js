@@ -3,6 +3,7 @@ const hora = document.getElementById("hora");
 const min = document.getElementById("minuto");
 const seg = document.getElementById("segundo");
 const lancamento = "17 dec 2024";
+let ingressos = [];
 
 function countdown() {
   const dataLanca = new Date(lancamento);
@@ -83,6 +84,23 @@ function addKeyboardEventListener() {
   }, false);
 }
 
+//Função para incluir ou remover seleção para os cards
+function selectedCard(selector) {
+  let element = document.querySelector(selector);
+  element.classList.toggle("card-selected");
+  if(ingressos.includes(selector)) {
+    ingressos.pop(selector);
+  } else {
+    ingressos.push(selector);
+  }
+}
+
+//Função para mostrar a confirmação dos cards selecionados ao clicar no botão Garanta o seu!
+function showSelectedCards() {
+  if(ingressos.length > 0) {
+    alert("Ingressos Selecionados:" + ingressos);
+  }
+}
 
 // checkKeyboardCode();
 addKeyboardEventListener();
