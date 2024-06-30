@@ -11,6 +11,7 @@
   --primary-orange: #f3c61f;
   --primary-magenta: #e33881;
   --highlight: #8377d3;
+  --selected: #066906;
   --standard-font: 'Verdana', sans-serif;
 }
 
@@ -79,4 +80,8 @@ h6 {
 .card-highlight {
   box-shadow: 10px 10px var(--highlight);
   transition: all ease 0.4s;
+}
+
+.card-selected {
+  border: 5px solid var(--selected);
 }
