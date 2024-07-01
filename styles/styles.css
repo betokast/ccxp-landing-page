@@ -58,7 +58,7 @@ h6 {
   font-weight: bolder;
 }
 
-#btn:hover {
+#btn:hover, #btn-form:hover {
   background-color: var(--primary-purple-hover);
   color: var(--primary-orange);
 }
@@ -85,3 +85,38 @@ h6 {
 .card-selected {
   border: 5px solid var(--selected);
 }
+
+#cards-section{
+  height: 280px;
+}
+
+#form-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  background-color: var(--primary-purple);
+  border-radius: 10px;
+  color: var(--white);
+  border: none;
+  margin: 30px 0;
+  width: 400px;
+  height: 70px;
+  font-size: 30px;
+  padding: 4px;
+}
+
+#btn-form {
+  padding: 22px 40px;
+  background-color: var(--primary-purple);
+  margin-left: 20px;
+  border: none;
+  border-radius: 10px;
+  color: var(--white);
+  text-transform: uppercase;
+  transition: all ease 0.5s;
+  font-weight: bolder;
+}
+
